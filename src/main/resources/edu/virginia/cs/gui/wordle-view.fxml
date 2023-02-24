@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="505.0" prefWidth="384.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.gui.WordleController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <Label fx:id="wordleLabel" text="Wordle">
+      <font>
+         <Font name="Times New Roman Bold" size="29.0" />
+      </font>
+   </Label>
+   <GridPane fx:id="guessGrid" prefHeight="351.0" prefWidth="344.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints prefHeight="55.0" />
+         <RowConstraints prefHeight="55.0" />
+         <RowConstraints prefHeight="55.0" vgrow="SOMETIMES" />
+         <RowConstraints prefHeight="55.0" vgrow="SOMETIMES" />
+         <RowConstraints prefHeight="55.0" vgrow="SOMETIMES" />
+         <RowConstraints prefHeight="55.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <TextField fx:id="guess1char1" alignment="CENTER" onKeyTyped="#handleEntryFirstFour" prefHeight="51.0" prefWidth="64.0">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess1char2" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess1char3" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess1char4" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess1char5" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleLastCharacter" prefHeight="55.0" GridPane.columnIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess2char1" alignment="CENTER" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="68.0" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess2char2" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess2char3" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess2char4" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess2char5" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleLastCharacter" prefHeight="55.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess3char1" alignment="CENTER" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="68.0" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess3char2" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess3char3" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess3char4" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess3char5" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleLastCharacter" prefHeight="55.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess4char1" alignment="CENTER" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="68.0" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess4char2" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess4char3" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess4char4" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess4char5" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleLastCharacter" prefHeight="55.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess5char1" alignment="CENTER" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="68.0" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess5char2" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess5char3" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess5char4" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess5char5" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleLastCharacter" prefHeight="55.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess6char1" alignment="CENTER" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="68.0" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess6char2" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess6char3" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess6char4" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleEntryFirstFour" prefHeight="55.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="guess6char5" alignment="CENTER" onKeyPressed="#handleBackspace" onKeyTyped="#handleLastCharacter" prefHeight="55.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </TextField>
+
+      </children>
+   </GridPane>
+   <Label fx:id="invalidWord">
+      <font>
+         <Font name="Verdana" size="15" />
+      </font>
+   </Label>
+   <Label fx:id="answer">
+      <font>
+         <Font size="18.0" />
+      </font></Label>
+   <Label fx:id="gameResult">
+      <font>
+         <Font name="Verdana" size="20" />
+      </font>
+   </Label>
+   <Label fx:id="playAgain">
+      <font>
+         <Font name="Verdana" size="20" />
+      </font>
+   </Label>
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="yesButton" onAction="#restart" text="Yes" />
+         <Button fx:id="noButton" mnemonicParsing="false" onAction="#close" text="No" />
+      </children>
+   </HBox>
+   <Label fx:id="remainingGuesses">
+      <font>
+         <Font name="Verdana" size="15" />
+      </font>
+   </Label>
+   <!--    <Button onAction="#onHelloButtonClick" text="Hello!" />-->
+
+</VBox>
